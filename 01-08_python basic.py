@@ -1,3 +1,6 @@
+#Image Processing 
+#이미지 반전, 밝게, 어둡게 처리 및 완전 흑백처리의 2가지 방법
+
 import math
 import os
 from tkinter import *
@@ -82,17 +85,17 @@ image = []
 window = Tk()
 window.geometry('300x300')
 window.title('영상처리 Alpha')
-# btn_1 = Button(window, text="반전", command = reverseImage)
-# btn_1.pack()
-#btn_2 = Button(window, text="밝게", command = RightImage)
-#btn_2.pack()
-#btn_3 = Button(window, text="어둡게", command = DarkImage)
-#btn_3.pack()
+btn_1 = Button(window, text="반전", command = reverseImage)
+btn_1.pack()
+btn_2 = Button(window, text="밝게", command = RightImage)
+btn_2.pack()
+btn_3 = Button(window, text="어둡게", command = DarkImage)
+btn_3.pack()
 btn_4 = Button(window, text="흑백(127)", command = whiteBlackImage_byte)
 btn_4.pack()
-# btnReverse_5 = Button(window, text="흑백(평균)", command = whiteBlackImage_avg)
-# btnReverse_5.pack()
-#btn_destroy = Button(window, text="초기화", command=)
+btnReverse_5 = Button(window, text="흑백(평균)", command = whiteBlackImage_avg)
+btnReverse_5.pack()
+btn_destroy = Button(window, text="초기화", command=)
 
 filename = 'Etc_Raw(squre)/newjeans.RAW'
 # 파일 크기 알아내기
