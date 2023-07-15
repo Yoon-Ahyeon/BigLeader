@@ -1,1 +1,0 @@
-select * from my_testdb.emp3;
