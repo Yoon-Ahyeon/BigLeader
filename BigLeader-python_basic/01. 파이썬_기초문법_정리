@@ -1,0 +1,119 @@
+print("Hello world!")
+
+#IF문
+
+num = 100
+if (num>=100):
+    print("It is over than 100 or same.")
+elif (num >= 50):
+    print("It is over than 50 or same")
+else:
+    print("It is lower than 50.")
+
+#For문
+
+hap = 0
+for i in range(1, 101, 1): #1부터 100까지 1씩 증가하면서 반복하여라.
+    hap += i
+
+print(hap)
+
+#QUIZ
+
+i= 1
+result = 0
+while (i<=100): #괄호는 꼭 써라..
+    result += i
+    i += 1
+
+print(result)
+
+
+#Function Declare
+def addNumber(n1, n2):
+
+    #global Parameter
+    total = 0
+
+    #Main Code
+    for i in range(n1, n2+1, 1):
+        total += i
+    return total
+
+result_2 = addNumber(1, 10)
+print(result_2)
+
+##Function - Class 생성
+def addFunc(n1, n2):
+    print(n1, '+', n2, '=', n1+n2)
+
+def subFunc(n1, n2):
+    print(n1, '-', n2, '=', n1-n2)
+
+def mulFunc(n1, n2):
+    print(n1, '*', n2, '=', n1*n2)
+
+def divFunc(n1, n2):
+    print(n1, '//', n2, '=', n1//n2)
+
+def powFunc(n1, n2):
+    print(n1, '**', n2, '=', n1 ** n2)
+
+def restFunc(n1, n2):
+    print(n1, '%', n2, '=', n1 % n2)
+
+##Parameter
+#num1, num2 = 0, 0 (안써도 잘만 된다. - 안정성 보장을 위해 사용하는걸지도?)
+
+## Main
+num1 = int(input("정수를 입력하세요."))
+num2 = int(input("정수를 입력하세요."))
+
+addFunc(num1, num2)
+subFunc(num1, num2)
+mulFunc(num1, num2)
+divFunc(num1, num2)
+powFunc(num1, num2)
+restFunc(num1, num2)
+
+#array - 배열 관련 문법 
+import random as rand
+
+#parameter
+arr = []
+#Function
+
+#Main Code
+
+#array initial
+for i in range(10):
+    arr.append(0) #배열의 초기화는 append() 함수 쓰기
+
+##배열에 값 대입, 2부터 짝수 대입##
+
+#i는 배열의 첨자로만 사용하는 것을 권장
+for i in range(len(arr)):
+    #arr[i] = (i+1) * 2
+    #arr[i] = num
+    #num += 2
+
+    arr[i] = rand.randint(0, 1000)
+
+print(arr)
+
+#배열 합계
+total = 0
+for i in range(len(arr)):
+    total += arr[i]
+print(total)
+
+#홀수 배열만 함계
+odd_total = 0
+for i in range(len(arr)):
+    if(arr[i] %2 == 1):
+        odd_total += arr[i]
+    else:
+        continue
+
+print(odd_total)
+
